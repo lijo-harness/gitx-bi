@@ -1,0 +1,30 @@
+pipeline:
+  name: second_pipeline1
+  identifier: second_pipeline
+  projectIdentifier: gitxbi
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: test1
+        identifier: test1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: ls -altr
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
