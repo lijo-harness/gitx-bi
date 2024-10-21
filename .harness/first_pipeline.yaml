@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: pwd
+                        script: ls
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
